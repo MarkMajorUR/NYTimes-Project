@@ -83,12 +83,16 @@ function startSearch(){
 	if(validDate(endYear)){
 		url += `&end_date=${endYear}0101`;
 	}
+
+	url+=`&api-key=${APIKey}`;
+
 	console.log(`URL: ${url}`);
-	$.ajax(url).then(dataParase);
+	$.ajax({url: url}).then(dataParase);
 }
 
 $(document).ready(function (){
-	$(IDSearchButton).click(function(){
+	$(IDSearchButton).click(function(ev){
+		ev.preventDefault();
 		startSearch();
 	});
 });
