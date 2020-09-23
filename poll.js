@@ -23,31 +23,31 @@ var returns = [
 	}
 ];
 
-function validDate(date){
-	if(isNaN(date)){
+function validDate(date) {
+	if(isNaN(date)) {
 		return false;
 	}
-	if(date > new Date().getFullYear){
+	if(date > new Date().getFullYear) {
 		return false;
 	}
-	if(date <= 0){
+	if(date <= 0) {
 		return false;
 	}
 	return true;
 }
 
-function dataParase(response){
+function dataParase(response) {
 	console.log(response);
 	var datas = response.response.docs;
 	var articles = [];
-	for(var i = 0; i<articleCount; i++){
+	for(var i = 0; i<articleCount; i++) {
 		articles[i] = {};
 		articles[i].Title = datas[i].headline.main;
 		var author = datas[i].byline.person[0];
-		if(author){
+		if(author) {
 			var name = `${author.firstname} ${author.middlename} ${author.lastname}`
 			articles[i].Author = name;
-		}else{
+		} else {
 			articles[i].Author = "";
 		}
 		articles[i].url = datas[i].web_url;
@@ -58,29 +58,29 @@ function dataParase(response){
 	PostArticles(articles);
 }
 
-function startSearch(){
+function startSearch() {
 	var url = BaseURL;
 	var searchTerm = $(IDSearchTerm).val();
-	if(searchTerm.trim() === ""){
+	if(searchTerm.trim() === "") {
 		alert("NO DATAS HERE BROSKI");
 		return;
 	}
 	url += `q=${searchTerm}`;
 
 	var recCount = parseInt($(IDNumberOfRecords).val());
-	if(isNaN(recCount)){
+	if(isNaN(recCount)) {
 		alert("invalid record count!");
 		return;
 	}
 	articleCount = recCount;
 
 	var startYear = parseInt($(IDStartYear).val());
-	if(validDate(startYear)){
+	if(validDate(startYear)) {
 		url += `&begin_date=${startYear}0101`;
 	}
 
 	var endYear = $(IDEndYear).val();
-	if(validDate(endYear)){
+	if(validDate(endYear)) {
 		url += `&end_date=${endYear}0101`;
 	}
 
@@ -90,8 +90,8 @@ function startSearch(){
 	$.ajax({url: url}).then(dataParase);
 }
 
-$(document).ready(function (){
-	$(IDSearchButton).click(function(ev){
+$(document).ready(function() {
+	$(IDSearchButton).click(function(ev) {
 		ev.preventDefault();
 		startSearch();
 	});
