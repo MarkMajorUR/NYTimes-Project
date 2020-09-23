@@ -1,1 +1,13 @@
-.style
+.container {
+  background-color: rgb(34, 34, 107);
+  color: white;
+  text-align: center;
+  max-width: fit-content;
+}
+.card-body {
+  flex-wrap: wrap;
+}
+.fixed-bottom {
+  text-align: center;
+  color: black;
+}
