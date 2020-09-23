@@ -61,7 +61,7 @@ function dataParase(response){
 function startSearch(){
 	var url = BaseURL;
 	var searchTerm = $(IDSearchTerm).val();
-	if(searchTerm === ""){
+	if(searchTerm.trim() === ""){
 		alert("NO DATAS HERE BROSKI");
 		return;
 	}
