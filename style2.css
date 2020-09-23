@@ -1,4 +1,4 @@
 .m_article {
-  background-color: aqua;
-  color: text;
+  background-color: aqua !important;
+  color: blue !important ;
 }

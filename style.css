@@ -1,8 +1,8 @@
-/* .container {
-  background-color: rgb(34, 34, 107);
+container {
+  background-color: white;
   color: white;
   text-align: center;
-  max-width: fit-content;
+  max-width: 1500px;
 }
 .card-body {
   flex-wrap: wrap;
@@ -10,4 +10,13 @@
 .fixed-bottom {
   text-align: center;
   color: black;
-} */
+}
+
+.card-body {
+  flex-wrap: wrap;
+}
+.fixed-bottom {
+  text-align: center;
+  color: black;
+}
+
