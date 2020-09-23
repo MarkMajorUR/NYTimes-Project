@@ -3,90 +3,97 @@
 
 <head>
 
-  <meta charset="UTF-8">
+	<meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Contact Info</title>
+	<title>Contact Info</title>
 
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"
-   />
-  <link rel="stylesheet" href="style.css">
-
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+	<link rel="stylesheet" href="style.css">
+	<script src="poll.js"></script>
+	<script src="populateDOM.js"></script>
 </head>
 
 <body>
- 
- 
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h1 class="display-4"></h1>
-        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-      </div>
-    </div>
-  
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="column"></div>
-    
-    </div>
-
-  <form>
-    <div class="form-group">
-      <label for="exampleFormControlInput1">search term</label>
-      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="searchterm">
-    </div>
-    <div class="form-group">
-      <label for="exampleFormControlSelect1">Example select</label>
-      <select class="form-control" id="exampleFormControlSelect1">
-        <option>1</option>
-        <option>5</option>
-        <option>10</option>
-      </select>
-    </div>
-    <div class="form-group">
-      
-      <div class="form-group">
-        <label for="exampleFormControlInput1">search term</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Start Year">
-      </div>
-      <div class="form-group">
-        <label for="exampleFormControlInput1">search term</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="End Year">
-      </div>
- 
-  </form>
-  
-
-<div class="row">
-  <div class="col-md-12">
-    <div class="card">
-      <div class="card-header">
-          Top Articles
-       </div>
-       <ol id="article-list"></ol> 
 
 
+	<div class="jumbotron jumbotron-fluid">
+		<div class="container">
+			<h1 class="display-4"></h1>
+			<p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+		</div>
+	</div>
 
-    
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="column"></div>
+
+		</div>
+
+		<form>
+			<div class="form-group">
+				<label for="searchTerm">Search Term</label>
+				<input type="text" class="form-control" id="searchTerm" placeholder="Search Term">
+			</div>
+			<div class="form-group">
+				<label for="exampleFormControlSelect1">Number of Records</label>
+				<select class="form-control" id="recordCount">
+					<option>1</option>
+					<option>5</option>
+					<option>10</option>
+				</select>
+			</div>
+			<div class="form-group">
+
+				<div class="form-group">
+					<label for="startYear">Start Year</label>
+					<input type="number" class="form-control" id="startYear" placeholder="Start Year">
+				</div>
+				<div class="form-group">
+					<label for="endYear">End Year</label>
+					<input type="number" class="form-control" id="endYear" placeholder="End Year">
+				</div>
+				<button id="startSearch">Search</button>
+
+		</form>
+
+
+		<div class="row">
+			<div class="col-md-12">
+				<div class="card">
+					<div class="card-header">
+						Top Articles
+					</div>
+					<ol id="article-list"></ol>
 
 
 
 
 
 
-    <br />
-    <br />
-    
-      <footer class="fixed-bottom">
-    
-        &#169; 2020 Mark Major
-      </footer>
-  
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>  
+
+
+
+
+					<br />
+					<br />
+
+					<footer class="fixed-bottom">
+
+						&#169; 2020 Mark Major
+					</footer>
+
+					<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+						integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+						crossorigin="anonymous"></script>
+					<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+						integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+						crossorigin="anonymous"></script>
+					<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+						integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+						crossorigin="anonymous"></script>
 </body>
